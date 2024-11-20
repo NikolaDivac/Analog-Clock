@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1b1b1b;
+    margin: 0;
+}
+
+.clock { /* Clock design */
+    width: 60vw; /* dynamic width based upon Viewport */
+    height: 60vw; /* dynamic width based upon Viewport */
+    border: 1vw solid #e4e3e3; /* dynamic width of the border */
+    border-radius: 50%;
+    max-width: 300px; /* max with of the clock */
+    max-height: 300px; /* max height of the clock */
+    position: relative;
+    padding: 2vw; /* dynamic padding */
+    box-shadow: 0 0 80px #efefef;
+    background:#434343;
+}
+
+.clock-face { /* the middle of the clock */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* Fix for the hand position */
+}
+
+.hand {/* hand */
+    width: 44%; /* Relative width of the hands */
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    background: #8e8d8d;
+    z-index: 1;
+}
+
+.hour-hand {/* hour hand */
+    height: 1.5vw; /* dynamic height */
+    max-height: 6px; /* max height */
+}
+
+.min-hand { /* min hand */
+    height: 1vw; /* dynamic height */
+    max-height: 4px; /* max height */
+}
+
+.second-hand { /* sec hand */
+    height: 0.5vw; /* dynamic height */
+    max-height: 2px; /* max height */
+    background: rgb(209, 143, 143);
+    box-shadow: 0 0 80px #efefef;
+}
+
+.number {
+    position: absolute;
+    font-size: 5vw; /* dynamic text size */
+    max-font-size: 24px; /* max text size */
+    transform: translate(-50%, -50%);
+}
+
+.clock::after {
+    content: '';
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 5vw; /* dynamic point messure */
+    height: 5vw; /* dynamic point height messure */
+    max-width: 15px; /* max point size */
+    max-height: 15px; /* max point height */
+    background-color: #e4e3e3;;
+    box-shadow: 0 0 80px #efefef;
+    z-index: 2;
+    border-radius: 45%;
+}
+.marking-four {
+    z-index: 4;
+    position: absolute;
+    width: 7%;
+    height: 7%;
+    background: #e4e3e3;;
+    box-shadow: 0 0 80px #efefef;
+    top: 46.5%;
+    left: 48.5%;
+    transform-origin: center;
+    border-radius: 50%;
+}
+/* Display the hour markings */
+.marking {
+    position: absolute;
+    width: 2%;
+    height: 35%;
+    background: #e4e3e3;
+    top: 15%;
+    left: 49.25%;
+    transform-origin: center bottom;
+    border-radius: 2px;
+}
+
+.adjustMarking {
+    position: absolute;
+    width: 3%;
+    height: 27.5%;
+    background: #434343;
+    top: 22.5%;
+    left: 49%;
+    transform-origin: center bottom;
+}
+
+/*? Display the minute markings ?*/
+.minute-marking {
+    z-index: 0;
+    position: absolute;
+    width: 1%;
+    height: 34.5%;
+    background: gray;
+    top: 15.55%;
+    left: 49.5%;
+    transform-origin: center bottom;
+}
+
+.adjustMinuteMarking {
+    position: absolute;
+    width: 2.1%;
+    height: 32.5%;
+    background: #434343;
+    top: 17.5%;
+    left: 49.25%;
+    transform-origin: center bottom;
+}
+.marking-one {
+    display: none;
+  }
+  .marking-two {
+    display: none;
+  }
+  .marking-three {
+    display: none;
+  }
+  .marking-four {
+    display: none;
+  }
+
+.number1  { top: 20%; left: 85%; }
+.number2  { top: 35%; left: 92%; }
+.number3  { top: 50%; left: 97%; }
+.number4  { top: 65%; left: 92%; }
+.number5  { top: 80%; left: 85%; }
+.number6  { top: 85%; left: 50%; }
+.number7  { top: 80%; left: 15%; }
+.number8  { top: 65%; left: 8%; }
+.number9  { top: 50%; left: 3%; }
+.number10 { top: 35%; left: 8%; }
+.number11 { top: 20%; left: 15%; }
+.number12 { top: 15%; left: 50%; }
